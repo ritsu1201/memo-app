@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>自分専用メモ検索アプリ</title>
+    <style>
+      body {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 40px;
+        gap: 40px;
+      }
+      header {
+        font-size: 50px;
+        font-weight: 700;
+      }
+      input {
+        font-size: 22px;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      }
+      input:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+      }
+      button {
+        font-size: 18px;
+        transition: all 0.3s;
+        cursor: pointer;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      }
+      button:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+      }
+      section {
+        margin: 40px;
+      }
+      li{list-style: none;}
+      .favorite{cursor: pointer;}
+    </style>
+  </head>
+  <body>
+    <header>自分専用メモ検索付きメモアプリ</header>
+    <h1 id ="memo-count"></h1>
+    <main>
+      <section>
+        <input id="input" type="text" placeholder="入力…" />
+        <button id="btn">追加</button>
+        <h2 id="push-text"></h2>
+      </section>
+      <section>
+        <input id="search-input" type="text" placeholder="探す" />
+        <button id="search-btn">検索</button>
+        <ul id="search-list">
+      </section>
+    </main>
+    <script src="メモ2.js"></script>
+  </body>
+</html>
