@@ -7,6 +7,10 @@ const pushText = document.getElementById("push-text");
 const searchList = document.getElementById("search-list");
 const countMemo = document.getElementById("memo-count");
 let arrayMemo = [];
+const now = new Date();
+const year = now.getFullYear();
+const time = year + "/" + month + "/";
+console.log(now);
 function saveMemo() {
   localStorage.setItem("save", JSON.stringify(arrayMemo));
 }
@@ -36,7 +40,7 @@ btn.addEventListener("click", () => {
   if (input.value.trim() === "") {
     return;
   }
-  arrayMemo.push({ text: input.value, favorite: false });
+  arrayMemo.push({ text: input.value, favorite: false, time: now });
   createMemo(arrayMemo[arrayMemo.length - 1], arrayMemo.length - 1);
   updateCount();
   saveMemo();
